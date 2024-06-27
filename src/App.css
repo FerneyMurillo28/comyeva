@@ -1,38 +1,106 @@
-.App {
-  text-align: center;
+.login-menu {
+  z-index: 2400;
+  position: fixed;
+  top: 25%;
+}
+.icon-hovered {
+  border: 2px solid #212529;
+  border-radius: 5px;
+}
+.menu-desplegable {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #5eb319;
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(-100%);
+  z-index: 1100;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.menu-desplegable.abierto {
+  background-color: #5eb319;
+  transform: translateX(0);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.menu-desplegable ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-desplegable ul li {
+  padding: 10px;
+}
+
+.button-list {
+  margin: 3px;
+}
+.hidden {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .notification-button {
+    display: block !important;
+  }
+  .normal-screen {
+    display: none !important;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@media (min-width: 769px) {
+  .notification-button {
+    display: none !important;
+  }
+  .normal-screen {
+    display: block !important;
+  }
+}
+.navbar-color {
+  background-color: #5eb319;
+}
+
+.splash-container {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100vh;
+  background: linear-gradient(to bottom right, white 50%, #00ff3c 50%);
 }
 
-.App-link {
-  color: #61dafb;
+.left-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.welcome-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.alusive-messages {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.right-column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image {
+  max-height: 80vh;
+  width: 100%;
+  object-fit: cover;
 }
